@@ -1,0 +1,28 @@
+services:
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: n8n
+    restart: unless-stopped
+
+    ports:
+      - "5678:5678"
+
+    environment:
+      - N8N_HOST=unmimeographed-babara-unplaned.ngrok-free.dev
+      - N8N_PROTOCOL=https
+      - N8N_PORT=5678
+      - WEBHOOK_URL=https://unmimeographed-babara-unplaned.ngrok-free.dev/
+      - GENERIC_TIMEZONE=Asia/Kolkata
+      - DB_TYPE=postgresdb
+      - DB_POSTGRESDB_HOST=aws-0-ap-southeast-1.pooler.supabase.com
+      - DB_POSTGRESDB_PORT=6543
+      - DB_POSTGRESDB_DATABASE=postgres
+      - DB_POSTGRESDB_USER=postgres.ijzbrfhusnamhjqsfksj
+      - DB_POSTGRESDB_PASSWORD= "Pritam@9625111203"
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=false
+
+    volumes:
+      - n8n_data:/home/node/.n8n
+
+volumes:
+  n8n_data:
