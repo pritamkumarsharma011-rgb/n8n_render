@@ -9,6 +9,7 @@ services:
 
     environment:
       - N8N_PROTOCOL=https
+      - N8N_HOST=140.238.225.74
       - N8N_PORT=5678
       - GENERIC_TIMEZONE=Asia/Kolkata
       - DB_TYPE=postgresdb
@@ -16,6 +17,7 @@ services:
       - DB_POSTGRESDB_PORT=6543
       - DB_POSTGRESDB_DATABASE=postgres
       - DB_POSTGRESDB_USER=postgres.ijzbrfhusnamhjqsfksj
+      - WEBHOOK_URL=http://140.238.225.74:5678/
       - DB_POSTGRESDB_PASSWORD= "Pritam@9625111203"
       - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=false
       - N8N_ENCRYPTION_KEY=DS999Oq/rVSeAU2Wv4+CPZUXD+YPFdRA
