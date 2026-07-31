@@ -18,6 +18,7 @@ services:
       - DB_POSTGRESDB_USER=postgres.ijzbrfhusnamhjqsfksj
       - DB_POSTGRESDB_PASSWORD= "Pritam@9625111203"
       - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=false
+      - N8N_ENCRYPTION_KEY=DS999Oq/rVSeAU2Wv4+CPZUXD+YPFdRA
 
     volumes:
       - n8n_data:/home/node/.n8n
